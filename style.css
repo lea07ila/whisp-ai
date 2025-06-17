@@ -1,0 +1,168 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+  height: 100%;
+  font-family: Inter, Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bottom-input-container {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 95%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 12px 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.bottom-input-container textarea {
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  padding: 12px 28px 12px 20px;
+  margin-bottom: 12px;
+  resize: none;
+  min-height: 48px;
+  max-height: 288px;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+.bottom-input-container textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bottom-input-container textarea::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.bottom-input-container textarea::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.bottom-input-container textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.send-button {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  box-shadow: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attach-button {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  box-shadow: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attach-button:hover {
+  background-color: #ffffff20;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.send-button.active-send {
+  background-color: white;
+  color: #333;
+  box-shadow: none;
+}
+
+.send-button.active-send:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.think-button,
+.search-button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.attach-button svg,
+.think-button svg,
+.search-button svg,
+.send-button svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.think-button:hover,
+.search-button:hover {
+  background-color: #ffffff20;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.think-button.active,
+.search-button.active {
+  background-color: #ffffff20;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
